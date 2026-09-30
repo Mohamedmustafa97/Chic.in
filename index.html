@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chic.in | Home Gadgets & More</title>
+<meta name="description" content="Chic.in - أدوات منزلية صغيرة، خردوات ومنتجات صينية مميزة.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="logo"><b>Chic.in</b><span>Home Gadgets & More</span></div>
+  <nav>
+    <a class="active" href="#home">الرئيسية</a>
+    <a href="#products">المنتجات</a>
+    <a href="#categories">الأقسام</a>
+    <a href="#offers">العروض</a>
+    <a href="#contact">اتصل بنا</a>
+  </nav>
+  <div class="actions">
+    <input id="search" type="search" placeholder="ابحث عن منتجك المفضل...">
+    <button onclick="openCart()" aria-label="السلة">🛒 <span id="cartCount">0</span></button>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <img src="images/cover.png" alt="Chic.in - الغلاف الرئيسي">
+  </section>
+
+  <section class="banner" id="offers">
+    <img src="images/banner.jpg" alt="عروض Chic.in">
+  </section>
+
+  <section class="benefits">
+    <div>🚚 <b>شحن سريع</b><small>لجميع المحافظات</small></div>
+    <div>🏷️ <b>أسعار مميزة</b><small>عروض مستمرة</small></div>
+    <div>🛡️ <b>منتجات موثوقة</b><small>اختيارات بعناية</small></div>
+    <div>💬 <b>خدمة العملاء</b><small>تواصل معنا بسهولة</small></div>
+  </section>
+
+  <section id="categories" class="section">
+    <h2>تصفح الأقسام</h2>
+    <div class="categories">
+      <button data-cat="الكل">الكل</button>
+      <button data-cat="أدوات المطبخ">🍳 أدوات المطبخ</button>
+      <button data-cat="التنظيف">🧹 أدوات التنظيف</button>
+      <button data-cat="تنظيم وتخزين">📦 تنظيم وتخزين</button>
+      <button data-cat="ديكورات منزلية">🏡 ديكورات منزلية</button>
+      <button data-cat="إلكترونيات منزلية">💡 إلكترونيات منزلية</button>
+      <button data-cat="خردوات">🔧 خردوات متنوعة</button>
+    </div>
+  </section>
+
+  <section id="products" class="section">
+    <div class="section-title"><h2>منتجات مميزة</h2><span id="resultCount"></span></div>
+    <div id="productGrid" class="products"></div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div><strong>Chic.in</strong><p>Home Gadgets & More</p></div>
+  <div><h3>تواصل معنا</h3><p>واتساب: ضع رقمك هنا في ملف script.js</p></div>
+  <div><h3>تابعنا</h3><p>Facebook · Instagram · TikTok</p></div>
+  <p class="copyright">© 2026 Chic.in — جميع الحقوق محفوظة</p>
+</footer>
+
+<div id="cart" class="cart">
+  <div class="cart-box">
+    <button class="close" onclick="closeCart()">×</button>
+    <h2>سلة المشتريات</h2>
+    <div id="cartItems"></div>
+    <div class="total">الإجمالي: <b id="total">0</b> جنيه</div>
+    <button class="checkout" onclick="checkout()">اطلب عبر واتساب</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
